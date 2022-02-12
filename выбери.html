@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		.box{
+			background-image: url(123.jpg);
+			position: absolute;
+			width: 300px;
+			height: 200px;
+			background-size: 100% 100%;
+			transition: 0.1s;
+			margin-left: 400px;
+			margin-top: 150px;
+		}
+		.box2{
+			background-image: url(bebra.jpg);
+			position: absolute;
+			width: 300px;
+			height: 200px;
+			background-size: 100% 100%;
+			transition: 0.1s;
+			margin-left: 800px;
+			margin-top: 150px;
+		}
+		.box3{
+			background-image: url(bebezyana.jpg);
+			position: absolute;
+			width: 300px;
+			height: 200px;
+			background-size: 100% 100%;
+			transition: 0.1s;
+			margin-left: 1200px;
+			margin-top: 150px;
+		}
+		.box4{
+			background-image: url(ы.jpg);
+			position: absolute;
+			width: 300px;
+			height: 200px;
+			background-size: 100% 100%;
+			transition: 0.1s;
+			margin-left: 400px;
+			margin-top: 500px;
+		}
+		.box5{
+			background-image: url(gygy.jpg);
+			position: absolute;
+			width: 300px;
+			height: 200px;
+			background-size: 100% 100%;
+			transition: 0.1s;
+			margin-left: 800px;
+			margin-top: 500px;
+		}
+		.box6{
+			background-image: url(ly.jpg);
+			position: absolute;
+			width: 300px;
+			height: 200px;
+			background-size: 100% 100%;
+			transition: 0.1s;
+			margin-left: 1200px;
+			margin-top: 500px;
+		}
+		.btn{
+            height: 100px;
+            width: 200px;
+            position: absolute;
+		}
+        .score{
+
+        }
+        .bg{
+        	background-image: url(fon.jpg);
+        	background-size: 100% 100%;
+        	height: 900px;
+        }
+        .text{
+            font-family: arial;
+            color: white;
+        }
+        .textbox{
+            position: absolute;
+            margin-top: 100px;
+        }
+        .win{
+        	background-image: url(win.jpg);
+        	height: 1000px;
+        	width: 2000px;
+        	display: none;
+        	position: absolute;
+        	background-size: 100% 100%;
+        }
+        .text1{
+            font-family: arial;
+            color: white;
+            width: 300px;
+        }
+	</style>
+</head>
+<body class="bg">
+<button class="btn">
+	скрыть
+</button>
+<div class="textbox">
+<h1 class="text1">
+	найди орангутана с белым фоном
+</h1>	
+<h1 class="text">
+	попытки:
+	<span class="score">
+	 0
+    </span>
+</h1>
+</div>
+
+<div class="box">
+	
+</div>
+
+<div class="box2">
+	
+</div>
+
+<div class="box3">
+	
+</div>
+
+<div class="box4">
+	
+</div>
+
+<div class="box5">
+	
+</div>
+
+<div class="box6">
+	
+</div>
+<div class="win"></div>
+<script type="text/javascript">
+	let score = 4;
+	document.querySelector('.score').innerHTML = score;
+
+	document.querySelector('.btn').onclick = function() {
+     document.querySelector('.box').style.marginLeft = "800px";
+     document.querySelector('.box').style.marginTop = "500px";
+     document.querySelector('.box2').style.marginLeft = "1200px";
+     document.querySelector('.box2').style.marginTop = "150px";
+
+     document.querySelector('.box').style.backgroundImage = "url(white.png)";
+     document.querySelector('.box2').style.backgroundImage = "url(white.png)";
+
+
+     document.querySelector('.box3').style.marginLeft = "800px";
+     document.querySelector('.box3').style.marginTop = "150px";
+     document.querySelector('.box4').style.marginTop = "500px";
+     document.querySelector('.box4').style.marginLeft = "400px";
+
+
+     document.querySelector('.box3').style.backgroundImage = "url(white.png)";
+     document.querySelector('.box4').style.backgroundImage = "url(white.png)";
+
+
+     document.querySelector('.box5').style.marginLeft = "400px";
+     document.querySelector('.box5').style.marginTop = "150px";
+     document.querySelector('.box6').style.marginTop = "500px";
+     document.querySelector('.box6').style.marginLeft = "1200px";
+
+     document.querySelector('.box5').style.backgroundImage = "url(white.png)";
+     document.querySelector('.box6').style.backgroundImage = "url(white.png)";
+	}
+	document.querySelector('.box').onclick = function() {
+	 score = score - 1
+     document.querySelector('.score').innerHTML = score;
+     document.querySelector('.box').style.backgroundImage = "url(123.jpg)";
+     if(score==0){
+		document.querySelector('.bg').style.display = 'none';
+	 }
+	}
+	document.querySelector('.box2').onclick = function() {
+	 score = score - 1
+     document.querySelector('.score').innerHTML = score;
+     document.querySelector('.box2').style.backgroundImage = "url(bebra.jpg)";
+     if(score==0){
+		document.querySelector('.bg').style.display = 'none';
+	 }
+	}
+	document.querySelector('.box3').onclick = function() {
+	 score = score - 1
+     document.querySelector('.score').innerHTML = score;
+     document.querySelector('.box3').style.backgroundImage = "url(bebezyana.jpg)";
+     if(score==0){
+		document.querySelector('.bg').style.display = 'none';
+	 }
+	}
+	document.querySelector('.box4').onclick = function() {
+	 score = 10
+     document.querySelector('.score').innerHTML = score;
+     document.querySelector('.box4').style.backgroundImage = "url(ы.jpg)";
+      if(score==10){
+		document.querySelector('.box').style.display = 'none';
+		document.querySelector('.box2').style.display = 'none';
+		document.querySelector('.box3').style.display = 'none';
+		document.querySelector('.box4').style.display = 'none';
+		document.querySelector('.box5').style.display = 'none';
+		document.querySelector('.box6').style.display = 'none';
+		document.querySelector('.win').style.display = 'block';
+	 }
+	}
+	document.querySelector('.box5').onclick = function() {
+	 score = score - 1
+     document.querySelector('.score').innerHTML = score;
+     document.querySelector('.box5').style.backgroundImage = "url(gygy.jpg)";
+     if(score==0){
+		document.querySelector('.bg').style.display = 'none';
+	 }
+	}
+	document.querySelector('.box6').onclick = function() {
+	 score = score - 1
+     document.querySelector('.score').innerHTML = score;
+     document.querySelector('.box6').style.backgroundImage = "url(ly.jpg)";
+     if(score==0){
+		document.querySelector('.bg').style.display = 'none';
+	 }
+	}
+
+</script>
+</body>
+</html>
